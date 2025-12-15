@@ -1,7 +1,7 @@
 {
   "name": "webkernel/dependencies",
   "description": "Centralized dependency bundle for Webkernel ecosystem",
-  "type": "project",
+  "type": "metapackage",
   "license": "MPL-2.0",
   "authors": [
     {
