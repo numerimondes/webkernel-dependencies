@@ -1,6 +1,6 @@
 {
   "name": "webkernel/dependencies",
-  "description": "Centralized dependency bundle for the Webkernel ecosystem. Provides a unified set of core libraries required across Webkernel modules.",
+  "description": "Centralized dependency bundle for the Webkernel ecosystem, offering a unified set of core libraries shared across all modules.",
   "type": "library",
   "license": "MPL-2.0",
   "authors": [
