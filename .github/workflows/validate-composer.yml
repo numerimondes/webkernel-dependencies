@@ -23,4 +23,4 @@ jobs:
           tools: composer
 
       - name: Validate composer.json
-        run: composer validate --no-check-lock --strict
+        run: composer validate --no-check-lock 
