@@ -1,23 +1,22 @@
 {
   "name": "webkernel/dependencies",
-  "description": "Centralized dependency bundle for Webkernel ecosystem",
+  "description": "Centralized dependency bundle for the Webkernel ecosystem. Provides a unified set of core libraries required across Webkernel modules.",
   "type": "library",
   "license": "MPL-2.0",
   "authors": [
     {
-      "name": "numerimondes",
+      "name": "Numerimondes",
       "email": "webkernel@numerimondes.com"
     }
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": "^8.4",
     "calebporzio/sushi": "^2.5",
     "filament/filament": "^4.0",
     "jeremykendall/php-domain-parser": "^6.4",
     "laravel/framework": "^12.0",
     "laravel/octane": "^2.12",
-    "laravel/prompts": "*",
+    "laravel/prompts": "^0.3.8",
     "laravel/tinker": "^2.10.1"
   },
   "config": {
