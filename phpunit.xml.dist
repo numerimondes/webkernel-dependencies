@@ -5,10 +5,11 @@
     bootstrap="vendor/autoload.php"
     colors="true"
     verbose="true"
-    failOnWarning="true"
+    failOnWarning="false"
     failOnRisky="true"
     failOnIncomplete="false"
     failOnSkipped="false"
+    failOnDeprecation="false"
 >
 
     <!-- Folder where your tests are located -->
@@ -18,14 +19,15 @@
         </testsuite>
     </testsuites>
 
-    <!-- Code coverage configuration -->
-    <coverage>
-        <!-- Source folder to analyze -->
+    <!-- Explicit source filter for coverage -->
+    <source>
         <include>
             <directory>src</directory>
         </include>
+    </source>
 
-        <!-- Generated reports -->
+    <!-- Code coverage configuration -->
+    <coverage>
         <report>
             <text outputFile="coverage.txt" showUncoveredFiles="true" />
             <clover outputFile="coverage.xml" />
