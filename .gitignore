@@ -65,4 +65,3 @@ web-sync.config
 *.AppImage
 
 junit.xml
-tests/
