@@ -21,22 +21,20 @@ jobs:
         with:
           php-version: '8.4'
           tools: composer
+          coverage: xdebug
 
       - name: Validate composer.json
         run: composer validate --no-check-lock
 
       - name: Install dependencies
-        run: composer require --dev phpunit/phpunit --no-update
-
-      - name: Install dependencies from lock file
         run: composer install --no-progress --no-suggest --prefer-dist
 
       - name: Run tests with coverage
-        run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+        run: vendor/bin/phpunit
 
       - name: Extract coverage percentage
         run: |
-          COVERAGE=$(vendor/bin/phpunit --coverage-text | grep -Po 'Lines:\s*\K[0-9]+\.[0-9]+')
+          COVERAGE=$(grep -Po 'Lines:\s*\K[0-9]+\.[0-9]+' coverage.txt)
           echo "coverage=$COVERAGE%" >> $GITHUB_ENV
 
       - name: Generate coverage badge

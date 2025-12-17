@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/12.0/phpunit.xsd"
+    bootstrap="vendor/autoload.php"
+    colors="true"
+    verbose="true"
+    failOnWarning="true"
+    failOnRisky="true"
+    failOnIncomplete="false"
+    failOnSkipped="false"
+>
+
+    <!-- Folder where your tests are located -->
+    <testsuites>
+        <testsuite name="Webkernel Test Suite">
+            <directory suffix="Test.php">tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <!-- Code coverage configuration -->
+    <coverage>
+        <!-- Source folder to analyze -->
+        <include>
+            <directory>src</directory>
+        </include>
+
+        <!-- Generated reports -->
+        <report>
+            <text outputFile="coverage.txt" showUncoveredFiles="true" />
+            <clover outputFile="coverage.xml" />
+            <html outputDirectory="coverage-html" />
+        </report>
+    </coverage>
+
+    <!-- Additional logging (optional) -->
+    <logging>
+        <junit outputFile="junit.xml" />
+    </logging>
+
+</phpunit>
